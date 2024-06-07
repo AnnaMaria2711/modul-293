@@ -1,5 +1,5 @@
 import './MainPage.css';
-import Sidebar from '../sidebar/Sidebar.tsx';
+import Sidebar from '../sidebar/Sidebar';
 
 function MainPage() {
     const username = localStorage.getItem('User');
@@ -7,8 +7,18 @@ function MainPage() {
 
     return (
         <>
-            <div className={"grid-container"}>
-            <h1>Hello {username ? username : 'Guest'}</h1>
+            <div className="main">
+                <header className="header">Hello {username ? username : 'Guest'}</header>
+                <div className="main-image">image</div>
+                <div className="content">
+                    <div className="image-section">image</div>
+                    <div className="image-section">image</div>
+                    <div className="image-section">image</div>
+                    <div className="text-section">text</div>
+                    <div className="text-section">text</div>
+                    <div className="text-section">text</div>
+                </div>
+                <footer className="footer">footer</footer>
             </div>
             <div>
                 <Sidebar />
