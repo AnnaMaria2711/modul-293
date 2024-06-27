@@ -53,7 +53,9 @@ function MainPage() {
             </aside>
             <main className="main">
                 <div className="main-image">
-                    <img src="https://media1.tenor.com/m/Bn3YjRjS_f8AAAAd/gaze.gif" alt="Panorama picture of a city" />
+                    <img src="https://media1.tenor.com/m/NG0ioOjLsVkAAAAC/anime.gif" alt="Cat Sky GIF" />
+                    <img src="https://media1.tenor.com/m/Zhwtu4cG7KoAAAAC/ripples-shimmering.gif" alt="Ripples Shimmering GIF" />
+                    <img src="https://media1.tenor.com/m/hukAljT7PnEAAAAC/nature-gif-anime.gif" alt="Anime GIF" />
                 </div>
                 <div className="text-area">
                     <p>This is the main text area. You can put your content here.</p>
