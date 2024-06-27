@@ -1,11 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-
 
 export type User = {
     username: string;
@@ -16,13 +14,13 @@ export type User = {
 };
 
 const continents = [
-    {value: "na", label: "North America"},
-    {value: "sa", label: "South America"},
-    {value: "eu", label: "Europe"},
-    {value: "af", label: "Africa"},
-    {value: "as", label: "Asia"},
-    {value: "oc", label: "Oceania"},
-    {value: "an", label: "Antarctica"}
+    { value: "na", label: "North America" },
+    { value: "sa", label: "South America" },
+    { value: "eu", label: "Europe" },
+    { value: "af", label: "Africa" },
+    { value: "as", label: "Asia" },
+    { value: "oc", label: "Oceania" },
+    { value: "an", label: "Antarctica" }
 ];
 
 export default function Login() {
@@ -37,7 +35,6 @@ export default function Login() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
 
         const errors: string[] = [];
         if (!name.trim()) {
@@ -75,7 +72,7 @@ export default function Login() {
     };
 
     return (
-        <main className="container mt-5 ">
+        <main className="container mt-5">
             <section className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card">
@@ -87,8 +84,9 @@ export default function Login() {
                                 <fieldset>
                                     <legend>Personal Information</legend>
                                     <div className="form-group">
-                                        <label>Username</label>
+                                        <label htmlFor="username">Username</label>
                                         <input
+                                            id="username"
                                             placeholder="Enter your Username"
                                             value={name}
                                             type="text"
@@ -114,51 +112,50 @@ export default function Login() {
                                             <div className="row">
                                                 <div className="col-4">
                                                     <div className="form-check gender-grid-cell">
-                                                        <label>
                                                         <input
                                                             type="radio"
+                                                            id="male"
                                                             value="male"
                                                             checked={gender === "male"}
                                                             className="form-check-input"
                                                             onChange={(e) => setGender(e.target.value)}
                                                         />
-                                                        </label>
-                                                        <label className="form-check-label">Male</label>
-
+                                                        <label htmlFor="male" className="form-check-label">Male</label>
                                                     </div>
                                                 </div>
                                                 <div className="col-4">
                                                     <div className="form-check gender-grid-cell">
                                                         <input
                                                             type="radio"
+                                                            id="female"
                                                             value="female"
                                                             checked={gender === "female"}
                                                             className="form-check-input"
                                                             onChange={(e) => setGender(e.target.value)}
                                                         />
-                                                        <label className="form-check-label">Female</label>
+                                                        <label htmlFor="female" className="form-check-label">Female</label>
                                                     </div>
                                                 </div>
                                                 <div className="col-4">
                                                     <div className="form-check gender-grid-cell">
-                                                        <label>
-                                                            <input
-                                                                type="radio"
-                                                                value="other"
-                                                                checked={gender === "other"}
-                                                                className="form-check-input"
-                                                                onChange={(e) => setGender(e.target.value)}
-                                                            />
-                                                        </label>
-                                                            <label className="form-check-label">Other</label>
+                                                        <input
+                                                            type="radio"
+                                                            id="other"
+                                                            value="other"
+                                                            checked={gender === "other"}
+                                                            className="form-check-input"
+                                                            onChange={(e) => setGender(e.target.value)}
+                                                        />
+                                                        <label htmlFor="other" className="form-check-label">Other</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </fieldset>
                                     </div>
                                     <div className="form-group">
-                                        <label>Date of Birth:</label>
+                                        <label htmlFor="birthdate">Date of Birth:</label>
                                         <DatePicker
+                                            id="birthdate"
                                             selected={birthdate}
                                             onChange={(date) => setBirthdate(date as Date)}
                                             dateFormat="dd.MM.yyyy"
@@ -168,16 +165,16 @@ export default function Login() {
                                     <div className="form-group">
                                         <fieldset>
                                             <legend>Place of Birth</legend>
-                                            <label>What continent were you born in?</label>
+                                            <label htmlFor="continentOfBirth">What continent were you born in?</label>
                                             <select
+                                                id="continentOfBirth"
                                                 value={continentOfBirth}
                                                 onChange={(e) => setContinentOfBirth(e.target.value)}
                                                 className="form-control"
                                             >
                                                 <option value="">Select continent</option>
                                                 {continents.map(continent => (
-                                                    <option key={continent.value}
-                                                            value={continent.value}>{continent.label}</option>
+                                                    <option key={continent.value} value={continent.value}>{continent.label}</option>
                                                 ))}
                                             </select>
                                         </fieldset>
