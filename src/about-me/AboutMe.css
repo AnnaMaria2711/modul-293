@@ -1,0 +1,120 @@
+
+.main-about-me{
+    grid-area: main;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+        "text-area "
+        "pdf-viewer";
+    grid-template-rows: auto 0.5fr;
+    gap: 10px;
+}
+
+.grid-container-about-me {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr 1fr;
+    height: 100vh;
+}
+
+.pdf-viewer{
+    grid-area: pdf-viewer;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main-about-me {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main-about-me {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 414px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main-about-me {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main-about-me {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .grid-container-about-me {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main-about-me {
+        padding: 10px;
+    }
+}

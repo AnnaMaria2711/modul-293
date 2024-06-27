@@ -23,9 +23,9 @@ function MainPage() {
     }, []);
 
     const links = [
-        { name: 'Link 1', path: 'link1' },
-        { name: 'Link 2', path: 'link2' },
-        { name: 'Link 3', path: 'link3' }
+        { name: 'About me', path: '/about-me' },
+        { name: 'Latest works', path: '/latest-works' },
+        { name: 'Extra Info', path: '/extra-information' }
     ];
 
     const handleClick = (path: string) => {
@@ -37,13 +37,13 @@ function MainPage() {
             <header className="header">
                 <h1>Hallo {user?.username}</h1>
             </header>
-            <aside className={`sidebar`}>
-                <div className="sidebar-content">
-                    <h2>Sidebar</h2>
+            <aside className="sidebar">
+                <div className="sidebar-content" >
+                    <h2 className="text-black">Sidebar</h2>
                     <nav>
                         <ul>
                             {links.map((link, index) => (
-                                <li key={index} onClick={() => handleClick(link.path)}>
+                                <li className="text-black" key={index} onClick={() => handleClick(link.path)}>
                                     {link.name}
                                 </li>
                             ))}
@@ -53,17 +53,18 @@ function MainPage() {
             </aside>
             <main className="main">
                 <div className="main-image">
-                    <img src="https://media1.tenor.com/m/NG0ioOjLsVkAAAAC/anime.gif" alt="Cat Sky GIF" />
+                    <img src="https://media1.tenor.com/m/ggmR_nHFsKoAAAAC/flowers-aesthetic.gif" alt="Cat Sky GIF" />
                     <img src="https://media1.tenor.com/m/Zhwtu4cG7KoAAAAC/ripples-shimmering.gif" alt="Ripples Shimmering GIF" />
                     <img src="https://media1.tenor.com/m/hukAljT7PnEAAAAC/nature-gif-anime.gif" alt="Anime GIF" />
                 </div>
                 <div className="text-area">
-                    <p>This is the main text area. You can put your content here.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula cursus sapien, ut laoreet sapien hendrerit nec.</p>
+                    <h4>Welcome to my E-Portfolio</h4>
+                    <big>I'm Anna-Maria, I'm a 16 year old aspiring developer, who is currently in her first year of her apprenticeship</big>
+                    <p>Dive in to discover my professional journey, explore my latest projects, and learn more about me. Stay updated with my newest work and don't hesitate to connect with me! </p>
                 </div>
             </main>
             <footer className="footer">
-                <h4>Footer Content</h4>
+                <h4>Programmed by Anna-Maria Bülk</h4>
             </footer>
         </div>
     );

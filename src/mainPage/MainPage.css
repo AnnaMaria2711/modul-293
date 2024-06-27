@@ -1,14 +1,10 @@
-/* MainPage.css */
-
 :root {
-    --header-bg-color: #497545;
+    --header-bg-color: #3c633a;
     --footer-bg-color: #304929;
     --sidebar-bg-color: #81bf74;
-    --text-field-bg-color:#E4F7D7;
+    --text-field-bg-color: #669563;
     --main-bg-color: #f1f1f1;
-    --header-text-color: black;
-    --footer-text-color: white;
-    --sidebar-text-color: white;
+    --secondary-text-color: white;
     --main-text-color: black;
     --login-grid-background-color: #8ec6c3;
 }
@@ -36,7 +32,7 @@ body, html {
 .header {
     grid-area: header;
     background-color: var(--header-bg-color);
-    color: var(--header-text-color);
+    color: var(--main-text-color);
     padding: 20px;
     font-size: 24px;
     text-align: center;
@@ -45,18 +41,18 @@ body, html {
 .sidebar {
     grid-area: sidebar;
     background-color: var(--sidebar-bg-color);
-    color: var(--sidebar-text-color);
+    color: var(--secondary-text-color);
     padding: 20px;
     font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
     z-index: 1000;
 }
 
 .sidebar-content {
     display: flex;
+    position: sticky;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -78,7 +74,7 @@ body, html {
 .footer {
     grid-area: footer;
     background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+    color: var(--secondary-text-color);
     padding: 20px;
     font-size: 18px;
     text-align: center;
@@ -86,6 +82,7 @@ body, html {
 
 .main-image {
     grid-area: main-image;
+    justify-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -99,8 +96,9 @@ body, html {
 
 .text-area {
     grid-area: text-area;
-    background-color: #669563;
-    padding: 20px;
+    background-color: var(--text-field-bg-color);
+    align-content: center;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -123,12 +121,11 @@ body, html {
     .grid-container {
         grid-template-areas:
             "header"
-            "main"
             "sidebar"
+            "main"
             "footer";
         grid-template-rows: auto 0.5fr auto auto;
         grid-template-columns: 1fr;
-        
     }
 
     .header, .footer, .sidebar, .main {
@@ -143,8 +140,132 @@ body, html {
         max-height: 200px;
     }
 
-    .text-area {
+    .header {
+        font-size: 20px;
+    }
+
+    .footer, .sidebar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main {
         padding: 10px;
+    }
+
+    .main-image {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image img {
+        max-height: 200px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .footer, .sidebar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 414px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main {
+        padding: 10px;
+    }
+
+    .main-image {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image img {
+        max-height: 200px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .footer, .sidebar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 390px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main {
+        padding: 10px;
+    }
+
+    .main-image {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image img {
+        max-height: 200px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .footer, .sidebar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-rows: auto 0.5fr auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .header, .footer, .sidebar, .main {
+        padding: 10px;
+    }
+
+    .main-image {
+        grid-template-columns: 1fr;
+    }
+
+    .main-image img {
+        max-height: 200px;
     }
 
     .header {
