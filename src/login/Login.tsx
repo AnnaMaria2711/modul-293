@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+
+
 
 export type User = {
     username: string;
@@ -14,13 +16,13 @@ export type User = {
 };
 
 const continents = [
-    { value: "na", label: "North America" },
-    { value: "sa", label: "South America" },
-    { value: "eu", label: "Europe" },
-    { value: "af", label: "Africa" },
-    { value: "as", label: "Asia" },
-    { value: "oc", label: "Oceania" },
-    { value: "an", label: "Antarctica" }
+    {value: "na", label: "North America"},
+    {value: "sa", label: "South America"},
+    {value: "eu", label: "Europe"},
+    {value: "af", label: "Africa"},
+    {value: "as", label: "Asia"},
+    {value: "oc", label: "Oceania"},
+    {value: "an", label: "Antarctica"}
 ];
 
 export default function Login() {
@@ -169,7 +171,8 @@ export default function Login() {
                                             >
                                                 <option value="">Select continent</option>
                                                 {continents.map(continent => (
-                                                    <option key={continent.value} value={continent.value}>{continent.label}</option>
+                                                    <option key={continent.value}
+                                                            value={continent.value}>{continent.label}</option>
                                                 ))}
                                             </select>
                                         </fieldset>
