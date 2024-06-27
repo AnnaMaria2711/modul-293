@@ -114,6 +114,7 @@ export default function Login() {
                                             <div className="row">
                                                 <div className="col-4">
                                                     <div className="form-check gender-grid-cell">
+                                                        <label>
                                                         <input
                                                             type="radio"
                                                             value="male"
@@ -121,7 +122,9 @@ export default function Login() {
                                                             className="form-check-input"
                                                             onChange={(e) => setGender(e.target.value)}
                                                         />
+                                                        </label>
                                                         <label className="form-check-label">Male</label>
+
                                                     </div>
                                                 </div>
                                                 <div className="col-4">
@@ -138,14 +141,16 @@ export default function Login() {
                                                 </div>
                                                 <div className="col-4">
                                                     <div className="form-check gender-grid-cell">
-                                                        <input
-                                                            type="radio"
-                                                            value="other"
-                                                            checked={gender === "other"}
-                                                            className="form-check-input"
-                                                            onChange={(e) => setGender(e.target.value)}
-                                                        />
-                                                        <label className="form-check-label">Other</label>
+                                                        <label>
+                                                            <input
+                                                                type="radio"
+                                                                value="other"
+                                                                checked={gender === "other"}
+                                                                className="form-check-input"
+                                                                onChange={(e) => setGender(e.target.value)}
+                                                            />
+                                                        </label>
+                                                            <label className="form-check-label">Other</label>
                                                     </div>
                                                 </div>
                                             </div>
