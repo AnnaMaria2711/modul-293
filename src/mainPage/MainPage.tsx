@@ -53,7 +53,7 @@ function MainPage() {
             </aside>
             <main className="main">
                 <div className="main-image">
-                    <img src="/public/7d77d878fa89a097cb75468d2fae3bc4.jpg" alt="Panorama picture of a city" />
+                    <img src="https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg" alt="Panorama picture of a city" />
                 </div>
                 <div className="text-area">
                     <p>This is the main text area. You can put your content here.</p>
