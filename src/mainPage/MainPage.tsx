@@ -53,9 +53,9 @@ function MainPage() {
             </aside>
             <main className="main">
                 <div className="main-image">
-                    <img src="https://media1.tenor.com/m/ggmR_nHFsKoAAAAC/flowers-aesthetic.gif" alt="Cat Sky GIF" />
-                    <img src="https://media1.tenor.com/m/Zhwtu4cG7KoAAAAC/ripples-shimmering.gif" alt="Ripples Shimmering GIF" />
-                    <img src="https://media1.tenor.com/m/hukAljT7PnEAAAAC/nature-gif-anime.gif" alt="Anime GIF" />
+                    <img src="https://media1.tenor.com/m/ggmR_nHFsKoAAAAC/flowers-aesthetic.gif" alt="GIF of Bees and Flowers in an anime artstyle" />
+                    <img src="https://media1.tenor.com/m/Zhwtu4cG7KoAAAAC/ripples-shimmering.gif" alt="GIF of a Tree hanging above water in an anime style" />
+                    <img src="https://media1.tenor.com/m/hukAljT7PnEAAAAC/nature-gif-anime.gif" alt="GIF of a rainy green park in an anime style" />
                 </div>
                 <div className="text-area">
                     <h4>Welcome to my E-Portfolio</h4>
